@@ -17,7 +17,7 @@ const libreria = async function () {
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">${libro.title}</h5>
             <a href="#" class="btn btn-primary">${libro.price}$</a>
-            <a href="#" class="btn btn-primary mt-1" onclick="skippa(event)">SKIP</a>
+            <button href="#" class="btn btn-primary mt-1" onclick="skippa(event)">SKIP</button>
             
           </div>
         </div>
@@ -34,7 +34,5 @@ const libreria = async function () {
 
 libreria()
 const skippa = (e) => {
-  let carta = document.querySelector(".caramella")
-  carta.remove()
-  console.log(typeof carta)
+  e.target.parentElement.parentElement.parentElement.remove()
 }
