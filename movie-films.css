@@ -1,4 +1,23 @@
 nav {
   background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
   height: 160px;
+}
+nav p {
+  font-size: x-large;
+  color: #308096;
+  position: relative;
+  top: 54px;
+  left: 10px;
+}
+
+.me-2 {
+  position: static;
+}
+
+#op {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }/*# sourceMappingURL=movie-films.css.map */
