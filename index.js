@@ -1,10 +1,10 @@
 const libreria = async function () {
   try {
     let libri = await fetch("https://striveschool-api.herokuapp.com/books")
-    console.log(libri)
+    // console.log(libri)
     if (libri.ok) {
       let data = await libri.json()
-      console.log("data", data)
+      // console.log("data", data)
 
       let div = document.getElementById("riga")
       data.forEach((libro) => {
