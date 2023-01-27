@@ -16,7 +16,7 @@ const libreria = async function () {
           <img src=${libro.img} class="card-img-top" alt="copertina">
           <div class="card-body d-flex flex-column justify-content-between">
             <h5 class="card-title">${libro.title}</h5>
-            <a href="#" class="btn btn-primary">${libro.price}$</a>
+            <a href="#" class="ak btn btn-primary">${libro.price}$</a>
             <button href="#" class="btn btn-primary mt-1" onclick="skippa(event)">SKIP</button>
             
           </div>
@@ -35,4 +35,21 @@ const libreria = async function () {
 libreria()
 const skippa = (e) => {
   e.target.parentElement.parentElement.parentElement.remove()
+}
+
+const clicca = (e) => {
+  let input = document.querySelector("input")
+  let ovvio = input.value
+  let titoli = document.querySelector(".card-title")
+  // console.log("questo è", titoli)
+  let filter = input.value.toUpperCase()
+  for (let i = 0; i < titoli.length; i++) {
+    a = titoli[i].querySelector(".ak")[0]
+    txtValue = a.textContent || a.innerText
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      titoli[i].style.display = ""
+    } else {
+      titoli[i].style.display = "none"
+    }
+  }
 }
